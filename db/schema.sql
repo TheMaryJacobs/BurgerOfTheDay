@@ -7,3 +7,18 @@
 --     * **devoured**: a boolean.
 
 
+-- Gets rid of the hamberders_database if it already exists --
+DROP DATABASE IF EXISTS burgers_db;
+-- Creates the burgers_db --
+CREATE DATABASE burgers_db;
+
+-- Causes all following code to use the burgers_db --
+USE burgers_db;
+
+-- Create the hamberders table in the burgers_db --
+CREATE TABLE burgers (
+    id INTEGER NOT NULL AUTO_INCREMENT,
+    burger_name VARCHAR(30) NOT NULL ,
+    devoured BOOLEAN DEFAULT false NOT NULL,
+    PRIMARY KEY(id)
+)
