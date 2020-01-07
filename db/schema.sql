@@ -7,7 +7,7 @@
 --     * **devoured**: a boolean.
 
 
--- Gets rid of the hamberders_database if it already exists --
+
 DROP DATABASE IF EXISTS burgers_db;
 -- Creates the burgers_db --
 CREATE DATABASE burgers_db;
