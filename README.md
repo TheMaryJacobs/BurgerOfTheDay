@@ -11,7 +11,13 @@ Enter a unique burger name and click the green button to add your burger to the 
 I, as a front-end developer, struggle with the back end. Sequelize is not my friend. Everytime I try to use it, I end up not being able to connect to anything due to errors within code in the node modules, and files that weren't set up by me. I don't know what I am doing wrong to run into these errors. 
 
 ## Future Developments 
-When I am a famous front-end developer I will find a back-end developer friend and never have them work on this homework because the concept is useless and boring. 
+When I am a famous front-end developer I will find a back-end developer friend and never have them work on this homework because the concept seems underdeveloped and the application is entirely unneccessary. 
 
+However, I really wanted to spend my time learning how to use Lottie ios from AirBnB, and BodyMovin which parses AfterEffects SVGs into JSON files to render vector animations. 
 
+## Contributing
+Matt Beachy helped me during class. He also didn't know why I was getting errors. 
+
+I found a great little free cheeseburger illustration from Filip Greš on Dribbble. I really wish I could have animated it.
+https://drawer.design/products/ugly-delicious/
 
