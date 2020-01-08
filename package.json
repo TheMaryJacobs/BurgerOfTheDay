@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/TheMaryJacobs/BurgerOfTheDay#readme",
   "dependencies": {
+    "bodymovin": "^4.13.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "lottie-web": "^5.5.10",

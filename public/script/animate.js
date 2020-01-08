@@ -3,5 +3,5 @@ const animItem = bodymovin.loadAnimation({
   wrapper: svgContainer,
   animType: 'svg',
   loop: true,
-  path: "/burgeranimate.json"
+  path: "./assets/burgeranimate.json"
 });

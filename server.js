@@ -1,26 +1,30 @@
-const db = require("./models");
-const express = require("express");
+//npm dependencies
+const express = require("express")
+const Sequelize = require('sequelize');
 
-// Sets up the Express App
-// =============================================================
+//database 
+const db = require("./models")
+
+//set up express app
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
-// Sets up the Express app to handle data parsing
+//data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// Routes
-// =============================================================
-app.use(express.static('public'))
-require("./routes/api-routes")(app);
+//routes
+app.use(express.static("public"))
 
-// Syncing our sequelize models and then starting our Express app
+require("./routes/api-routes.js")(app);
+
+
+
+// Starts the server to begin listening
 // =============================================================
-db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
+
+db.sequelize.sync({}).then(function() {
+    app.listen(PORT, function() {
+      console.log("App listening on PORT " + PORT);
+    });
   });
-});
-
-console.log ("hi");

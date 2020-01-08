@@ -3,18 +3,24 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url("../assets/burgerGradient.svg");
-    background-blend-mode: overlay;
-    background-size: cover;
     font-family: 'Bebas Neue', sans-serif;
     font-size: 16px;
+    background-color: #feaa36;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1200 800'%3E%3Cdefs%3E%3CradialGradient id='a' cx='0' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23f4623b'/%3E%3Cstop offset='1' stop-color='%23f4623b' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='b' cx='1200' cy='800' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23c3dd28'/%3E%3Cstop offset='1' stop-color='%23c3dd28' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='c' cx='600' cy='0' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23d0ac30'/%3E%3Cstop offset='1' stop-color='%23d0ac30' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='d' cx='600' cy='800' r='600' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23feaa36'/%3E%3Cstop offset='1' stop-color='%23feaa36' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='0' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23e9415b'/%3E%3Cstop offset='1' stop-color='%23e9415b' stop-opacity='0'/%3E%3C/radialGradient%3E%3CradialGradient id='f' cx='1200' cy='0' r='800' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23569c39'/%3E%3Cstop offset='1' stop-color='%23569c39' stop-opacity='0'/%3E%3C/radialGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='1200' height='800'/%3E%3Crect fill='url(%23b)' width='1200' height='800'/%3E%3Crect fill='url(%23c)' width='1200' height='800'/%3E%3Crect fill='url(%23d)' width='1200' height='800'/%3E%3Crect fill='url(%23e)' width='1200' height='800'/%3E%3Crect fill='url(%23f)' width='1200' height='800'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
 }
-
-.burger{
+.burger-img{
     width: 250px;
 }
-
-button {
+.burger-storage{
+    justify-content: right;
+    text-align: right;
+}
+.burger-name{
+    text-align: right;
+}
+.btn-lg{
     margin: 10px;
     padding: 10px;
     background-color: #88c11a;
@@ -23,8 +29,16 @@ button {
     color:#396825;
     font-size: 22px;
 }
-.burger-js {
-    background-color:rgba(255, 255, 255, 0.8);
+.devour-btn{
+    background-color: orange;
+    color: white;
+margin-left: 450px;
+align-content: right;
+justify-self: right ;
+}
+
+.burger{
+    color:rgb(255, 255, 255);
     margin: 5px 0;
     padding: 7px;
     font-size: 18px;
@@ -40,22 +54,23 @@ h1{
 p{
     font-size: 22px;
 }
+.devoured-storage{
+    text-align: left;
+    justify-content: left;
+   padding-top: 15px;
+}
 
 .devoured {
-    background-color: rgba(255, 255, 255, 0.8);
+    color: green;
     padding: 3px;
     font-size: 15px;
+    text-align: left;
+    margin-top: 30px;
+    text-decoration-line: line-through;
 }
 
-#devour {
+
+/* #devour {
     padding: 5px;
-}
+} */
 
-footer {
-    color: white;
-    font-size: 11px;
-    font-style: italic;
-    text-align: center;
-    padding: 15px;
-    background-color: black;
-}

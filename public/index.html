@@ -16,7 +16,7 @@
     <header class="container">
         <div class="row py-4">
             <div class="col text-center text-warning">
-                <img src="./assets/03.png" class="burger" alt="Burger Image">
+                <img src="./assets/03.png" class="burger-img" alt="Burger Image">
                 <div id="svgContainer"></div>
 
                 <h1>BURGERS</h1>
@@ -24,27 +24,54 @@
         </div>
     </header>
     <section class="container">
-        <!-- BURGER SECTION -->
-        <div class="row">
-            <!-- NEW -->
-            <div class="col-sm-12 col-md-6 mb-5 text-white" id="left-sidebar"></div>
-            <!-- DEVOURED -->
-            <div class="col-sm-12 col-md-6 mb-5 pl-md-5" id="right-sidebar"></div>
-        </div>
-
-        <!-- MAIN ============================================================== -->
+         <!-- MAIN ============================================================== -->
         <div class="row">
             <div class="col main mb-3 text-center">
                 <p class="text-white">Enter a unique burger flavor.</p>
                 <textarea name="burger" id="burger-name" cols="50" rows="3"></textarea>
                 <br>
-                <button type="submit" class="btn-lg" id="submit-btn">What's Your Flavor?</button>
+                <button type="submit" class="btn-lg" id="create-btn">What's Your Flavor?</button>
                 
             </div>
         </div>
+        
+        <!-- BURGER SECTION -->
+        <div id="all-burgers" class="row">
+            <!-- NEW -->
+            <div class="col mb-5 text-white" id="burger-storage"> 
+                <div class="burger ${id}">
+                    <h3 class="burger-name">You Feta Believe It</h3>
+                    <button id=${id} class="devour-btn">Devour!</button>
+                </div>
+                <div class="burger ${id}">
+                    <h3 class="burger-name">Pepper Don't Preach</h3>
+                    <button id=${id} class="devour-btn">Devour!</button>
+                </div>
+                <div class="burger ${id}">
+                    <h3 class="burger-name">Poblano Picasso</h3>
+                    <button id=${id} class="devour-btn">Devour!</button>
+                </div>
+        </div>
+            <!-- DEVOURED -->
+                <div class="col mb-5" id="devoured-storage"> 
+                    <div class="devoured ${id}">
+                        <h3 class="dev-burger-name">Use It Or Bleus It</h3>
+                    </div>
+                    <div class="devoured ${id}">
+                        <h3 class="dev-burger-name">Fun to Eat at the RYE-MCA</h3> 
+                    </div>
+                    <div class="devoured ${id}">
+                        <h3 class="dev-burger-name">Poutine on the Ritz</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
     </section>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="../controllers/burgers_controller.js"></script>
+    <!-- <script src="../controllers/burgers_controller.js"></script> -->
+    <script src="./script/animate.js"></script>
     <script src="./script/index.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.3/lottie.min.js"></script>
 </body>
