@@ -1,78 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>B U R G E R S</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/burger_style.css">
-</head>
-
-<body>
-    <header class="container">
-        <div class="row py-4">
-            <div class="col text-center text-warning">
-                <img src="./assets/03.png" class="burger-img" alt="Burger Image">
-                <div id="svgContainer"></div>
-
-                <h1>BURGERS</h1>
-            </div>
-        </div>
-    </header>
-    <section class="container">
-         <!-- MAIN ============================================================== -->
-        <div class="row">
-            <div class="col main mb-3 text-center">
-                <p class="text-white">Enter a unique burger flavor.</p>
-                <textarea name="burger" id="burger-name" cols="50" rows="3"></textarea>
-                <br>
-                <button type="submit" class="btn-lg" id="create-btn">What's Your Flavor?</button>
-                
-            </div>
-        </div>
-        
-        <!-- BURGER SECTION -->
-        <div id="all-burgers" class="row">
-            <!-- NEW -->
-            <div class="col mb-5 text-white" id="burger-storage"> 
-                <div class="burger ${id}">
-                    <h3 class="burger-name">You Feta Believe It</h3>
-                    <button id=${id} class="devour-btn">Devour!</button>
-                </div>
-                <div class="burger ${id}">
-                    <h3 class="burger-name">Pepper Don't Preach</h3>
-                    <button id=${id} class="devour-btn">Devour!</button>
-                </div>
-                <div class="burger ${id}">
-                    <h3 class="burger-name">Poblano Picasso</h3>
-                    <button id=${id} class="devour-btn">Devour!</button>
-                </div>
-        </div>
-            <!-- DEVOURED -->
-                <div class="col mb-5" id="devoured-storage"> 
-                    <div class="devoured ${id}">
-                        <h3 class="dev-burger-name">Use It Or Bleus It</h3>
-                    </div>
-                    <div class="devoured ${id}">
-                        <h3 class="dev-burger-name">Fun to Eat at the RYE-MCA</h3> 
-                    </div>
-                    <div class="devoured ${id}">
-                        <h3 class="dev-burger-name">Poutine on the Ritz</h3>
-                    </div>
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <title>BURGERS</title>
+  </head>
+  <body id='body'>
+    <div class="container">
+        <header class="container">
+            <div class="row py-4">
+                <div class="col text-center text-warning">
+                    <img src="./images/03.png" class="burger-img" alt="Burger Image">
+                    <div id="svgContainer"></div>
+    
+                    <h1>BURGERS</h1>
                 </div>
             </div>
+        </header>
+      <section class="mt-5 main-section">
+        <div class="row mt-2">
+          <div class="col-6 col-lg-4">
+            <div class="list">
+              Waiting
+            </div>
+            <ul id="notdevoured"></ul>
+          </div>
+          <div class="col-12 col-lg-4">
+            <form>
+              <div class="row">
+                <div class="col">
+                  <input type="text" id="burgerName" autocomplete="off" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <button id="button">Place order</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-6 col-lg-4">
+            <div class="list">
+              Served
+            </div>
+            <ul id="devoured"></ul>
+          </div>
         </div>
-
-       
-    </section>
+      </section>
+    </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- <script src="../controllers/burgers_controller.js"></script> -->
-    <script src="./script/animate.js"></script>
-    <script src="./script/index.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.4.3/lottie.min.js"></script>
-</body>
+    <script src="/scripts/index.js"></script>
+  </body>
 </html>

@@ -2,22 +2,32 @@
   "development": {
     "username": "root",
     "password": "root",
-    "database": "burger_db",
+    "database": "burgers_db",
     "host": "localhost",
-    "port": 3306,
+    "port": "8889",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "root",
-    "database": "database_test",
-    "host": "localhost",
+    "database": "burgers_db",
+    "host": "127.0.0.1",
+    "port": "8889",
+    "socketPath": "~travis/.my.cnf",
     "dialect": "mysql",
-    "operatorsAliases": false
+    "logging": false
+  },
+  "ci": {
+    "username": "root",
+    "password": "root",
+    "database": "burgers_db",
+    "host": "127.0.0.1",
+    "socketPath": "~travis/.my.cnf",
+    "dialect": "mysql",
+    "logging": false
   },
   "production": {
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
-
 }
