@@ -1,63 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
-    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/styles.css" />
-    <title>BURGERS</title>
-  </head>
-  <body id='body'>
-    <div class="container">
-        <header class="container">
-            <div class="row py-4">
-                <div class="col text-center text-warning">
-                    <img src="./images/03.png" class="burger-img" alt="Burger Image">
-                    <div id="svgContainer"></div>
-    
-                    <h1>BURGERS</h1>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BurgerOfTheDay</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Staatliches&display=swap" rel="stylesheet">    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body class="body">
+    <section class="container">
+        <h1 class="main-title">B U R G E R S</h1>  
+        <div class="row d-flex justify-content-center">
+            <div class="form-group">
+                <p></p>
+                <textarea class="form-control" placeholder="Enter Your Dream Burger" id="burger-form" rows="3"></textarea>
             </div>
-        </header>
-      <section class="mt-5 main-section">
-        <div class="row mt-2">
-          <div class="col-6 col-lg-4">
-            <div class="list">
-              Waiting
-            </div>
-            <ul id="notdevoured"></ul>
-          </div>
-          <div class="col-12 col-lg-4">
-            <form>
-              <div class="row">
-                <div class="col">
-                  <input type="text" id="burgerName" autocomplete="off" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <button id="button">Place order</button>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="col-6 col-lg-4">
-            <div class="list">
-              Served
-            </div>
-            <ul id="devoured"></ul>
-          </div>
         </div>
-      </section>
-    </div>
+        <!-- d-flex justify-content-center -->
+        <div class="row d-flex justify-content-center">
+            <button type="button" id="submit-button" class="mb-2 font btn btn-primary">Make Dat Burger</button>
+        </div>
+        <div class="row">
+          <!-- col-sm-12 col-md-4 mb-5 pl-md-5 -->
+            <div class="col" id="devoured"></div>
+            <!-- col-sm-12 col-md-4 mb-5 text-white -->
+            <div class="col" id="burger-input"></div>
+        </div>
+    </section>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="/scripts/index.js"></script>
-  </body>
+    <script src="./assets/js/burger-controller.js"></script>
+</body>
 </html>

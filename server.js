@@ -1,36 +1,27 @@
-require("dotenv").config();
+// DEPENDENCIES
+const express = require('express');
 
-const express = require("express");
-const path = require("path");
-
-//Connection to database
-const connect = require("./config/connection");
-
-//Connection to burger models
-const db = require("./models/Burger");
-
+// UTILIZING EXPRESS
 const app = express();
 
-app.use(express.urlencoded({ extended: false }));
+// DEFINING THE PORT
+const PORT = process.env.PORT || 3306;
+
+// REQUIRING THE DATABASE FROM MODELS
+const db = require("./models");
+
+// UTILIZING EXPRESS TO HANDLE PARSING OF DATA
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-//routes
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "../public/index.html"));
-});
-app.use("/api/", require("./routes/api.js"));
+// ROUTES
+require("./routes/api-routes")(app);
 
-const PORT = process.env.PORT || 3000;
 
-var syncOptions = { force: false };
-
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
-    console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
-      PORT,
-      PORT
-    );
-  });
+// SYNCING SEQUELIZE MODELS AND STARTING SERVER
+db.sequelize.sync().then(function() {
+    app.listen(PORT, function() {
+        console.log("APP LISTENING ON PORT" + PORT);
+    });
 });
