@@ -10,22 +10,25 @@
 </head>
 <body class="body">
     <section class="container">
-        <h1 class="main-title">B U R G E R S</h1>  
+        <h1 class="main-title">BURGERS</h1>  
+        <img class="burger-img" src="./images/03.png">
+        <h2>Enter a unique burger flavor.</h2>
         <div class="row d-flex justify-content-center">
+          
             <div class="form-group">
                 <p></p>
-                <textarea class="form-control" placeholder="Enter Your Dream Burger" id="burger-form" rows="3"></textarea>
+                <textarea class="form-control" id="burger-form"></textarea>
             </div>
         </div>
         <!-- d-flex justify-content-center -->
         <div class="row d-flex justify-content-center">
-            <button type="button" id="submit-button" class="mb-2 font btn btn-primary">Make Dat Burger</button>
+            <button type="button" id="submit-button" class="button">What's Yo Flava?</button>
         </div>
         <div class="row">
           <!-- col-sm-12 col-md-4 mb-5 pl-md-5 -->
-            <div class="col" id="devoured"></div>
+            <div class="burger-storage col" id="devoured"></div>
             <!-- col-sm-12 col-md-4 mb-5 text-white -->
-            <div class="col" id="burger-input"></div>
+            <div class="devoured-storage col" id="burger-input"></div>
         </div>
     </section>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
