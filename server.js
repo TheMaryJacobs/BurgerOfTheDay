@@ -5,7 +5,7 @@ const express = require('express');
 const app = express();
 
 // DEFINING THE PORT
-const PORT = process.env.PORT || 3306;
+const PORT = process.env.PORT || 8080;
 
 // REQUIRING THE DATABASE FROM MODELS
 const db = require("./models");
